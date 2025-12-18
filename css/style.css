@@ -29,7 +29,7 @@ p {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -111,8 +111,50 @@ body {
 }
 
 .info {
-  padding: 0 70px;
+  width: 1030px;
+  height: 560px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.info__img {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+.info__img img {
+  width: 400px;
+  height: 400px;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
+  border: 1px solid var(--brand-color);
+}
+.info__img::before, .info__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.info__img::before {
+  background: linear-gradient(#f4b400 0 0) top left, linear-gradient(#f4b400 0 0) top right, linear-gradient(#f4b400 0 0) bottom left, linear-gradient(#f4b400 0 0) bottom right;
+  background-size: 100px 1px;
+  background-repeat: no-repeat;
+}
+.info__img::after {
+  background: linear-gradient(#f4b400 0 0) top left, linear-gradient(#f4b400 0 0) bottom left, linear-gradient(#f4b400 0 0) top right, linear-gradient(#f4b400 0 0) bottom right;
+  background-size: 1px 100px;
+  background-repeat: no-repeat;
+}
+.info__line {
+  width: 560px;
+  height: 1px;
+  background-color: var(--brand-color);
+  rotate: 90deg;
+}
+.info__text {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }/*# sourceMappingURL=style.css.map */
