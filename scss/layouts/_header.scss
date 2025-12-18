@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 1.3;
+        color: var(--gray-medium-color);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 1.1;
+        color: var(--brand-color);
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__logo {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+
+    &__line {
+        width: 210px;
+        height: 1px;
+        background-color: var(--brand-color);
+    }
+}
