@@ -98,15 +98,85 @@
             border: 2px solid var(--gray-light-color);
             border-radius: 50%;
             color: var(--gray-light-color);
+
+            &--icon {
+                fill: var(--gray-light-color);
+
+                &:hover {
+                    fill: var(--brand-color);
+                }
+            }
+
+            &:hover {
+                color: var(--brand-color);
+                border-color: var(--brand-color);
+                background-color: var(--gray-light-color-10);
+                box-shadow: 2px 4px 4px var(--gray-light-color);
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        &--text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
         }
 
-        &--link:hover {
-            color: var(--brand-color);
-            border-color: var(--brand-color);
+        &--paragraph {
+            font-size: 14px;
+            line-height: 1.7;
+            font-weight: 500;
+            color: var(--dark-color);
         }
 
-        &--icon {
-            fill: transparent;
+        &--line {
+            position: relative;
+            width: 20px;
+            height: 4px;
+            background-color: var(--brand-color);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 25px;
+                width: 10px;
+                height: 5px;
+                background-color: var(--brand-color);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 25px;
+                width: 10px;
+                height: 4px;
+                background-color: var(--brand-color);
+            }
+        }
+
+        &--button {
+            padding: 5px 10px;
+            border: 1px solid var(--brand-color);
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--gray-dark-color);
+
+            &:hover {
+                background-color: var(--brand-color-50);
+                box-shadow: 0 4px 6px var(--dark-color);
+            }
         }
     }
 }

@@ -3,7 +3,9 @@
   --gray-medium-color: #898f8f;
   --dark-color: #333333;
   --gray-light-color: #cccccc;
+  --gray-light-color-10: rgba(204, 204, 204, 0.1);
   --brand-color: #ffcc00;
+  --brand-color-50: rgba(255, 204, 0, 0.5);
   --light-color: #ffffff;
 }
 
@@ -49,6 +51,10 @@ ul {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   color: var(--dark-color);
@@ -70,6 +76,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  margin: 0 auto;
 }
 
 .header {
@@ -197,10 +204,71 @@ body {
   border-radius: 50%;
   color: var(--gray-light-color);
 }
+.info__list--link--icon {
+  fill: var(--gray-light-color);
+}
+.info__list--link--icon:hover {
+  fill: var(--brand-color);
+}
 .info__list--link:hover {
   color: var(--brand-color);
   border-color: var(--brand-color);
+  background-color: var(--gray-light-color-10);
+  box-shadow: 2px 4px 4px var(--gray-light-color);
 }
-.info__list--icon {
-  fill: transparent;
+.info__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.info__description--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+.info__description--paragraph {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.info__description--line {
+  position: relative;
+  width: 20px;
+  height: 4px;
+  background-color: var(--brand-color);
+}
+.info__description--line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 10px;
+  height: 5px;
+  background-color: var(--brand-color);
+}
+.info__description--line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 25px;
+  width: 10px;
+  height: 4px;
+  background-color: var(--brand-color);
+}
+.info__description--button {
+  padding: 5px 10px;
+  border: 1px solid var(--brand-color);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--gray-dark-color);
+}
+.info__description--button:hover {
+  background-color: var(--brand-color-50);
+  box-shadow: 0 4px 6px var(--dark-color);
 }/*# sourceMappingURL=style.css.map */
