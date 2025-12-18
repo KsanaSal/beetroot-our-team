@@ -1,2 +1,7 @@
 @use "./utils/variables";
 @use "./base/reset";
+@use "./base/base";
+
+@use "./layouts/section";
+@use "./layouts/container";
+@use "./layouts/header";
